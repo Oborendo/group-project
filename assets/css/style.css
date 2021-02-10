@@ -1,1 +1,41 @@
+
 /* */
+
+body{
+    color: blue;
+}
+
+.card{
+    float: right;
+}
+
+.navbar {
+    font-size: 100%;
+    font-family: 'Staatliches',cursive;
+
+    background-color: #FF6900 ;
+}
+
+.container {
+    background-color:#FFC08F;
+}
+
+.col-9{
+
+   color:white;
+   
+}
+
+.col-4{
+    background-color:#CFFCEC ;
+    
+}
+.list-group-item{
+    color:#FF6900  ;
+}
+
+/* color navbar and navbar-brand */
+/* change search button color */
+/* in USER HISTORY container add themed color */
+/* change the color when the selector glides over a choice */
+/* in COL.6 change labels/colors to boxes */
