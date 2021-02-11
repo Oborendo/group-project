@@ -14,7 +14,7 @@ var search4 = document.getElementById("search4");
 
 // history search clicks
 
-search0.click(function () {
+search0.addEventListener("click" , function () {
   //click works
   console.log("click");
   // city = localStorage.getItem(localStorage.key(0));
@@ -22,28 +22,28 @@ search0.click(function () {
 
 });
 
-search1.click(function () {
+search1.addEventListener("click", function () {
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(1));
   // cityWheather(city2);
 });
 
-search2.click(function () {
+search2.addEventListener("click", function () {
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(2));
   // cityWheather(city2);
 });
 
-search3.click(function () {
+search3.addEventListener("click", function () {
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(3));
   // cityWheather(city2);
 });
 
-search4.click(function () {
+search4.addEventListener("click" , function () {
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(4));
