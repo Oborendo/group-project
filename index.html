@@ -4,18 +4,27 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+      </style>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
     <title>Movie Rec</title>
   </head>
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-white ">
     <div class="container-fluid">
-      <a class="navbar-brand">Movie Rec</a>
+      <a class="text-white navbar-brand">Movie REC</a>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+
+        <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+        <button class="btn text-white btn-info" type="submit">Search</button>
+
       </form>
     </div>
   </nav>
@@ -23,43 +32,57 @@
   
     <div class="container">
       <div class="row">
-        <div class="col-9">User History</div>
+
+        <div class="col-9 ">History</div>
+
         <div class="col-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-              Cras justo odio
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+         
+        <div class="row">
+
+          <div class="btn-group-vertical" id="search0">
+            <div> "hi" </div>
           </div>
+
+          <div class="btn-group-vertical" id="search1">
+            <div>"hi"</div>
+          </div>
+          <div class="btn-group-vertical" id="search2">
+            <div></div>
+
+          </div>
+          <div class="btn-group-vertical" id="search3">
+            <div>"hi"</div>
+
+          </div>
+          <div class="btn-group-vertical" id="search4">
+            <div>"hi"</div>
+
           <br></div>
-        <div class="col-6">.col-6
+        <div class="col-6">
           <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <a href="#" class="list-group-item " aria-current="true">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small>3 days ago</small>
+                <h5 class="mb-1">Top Rated</h5>
+                <small class="text-info">3 days ago</small>
               </div>
               <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
               <small>Donec id elit non mi porta.</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small class="text-muted">3 days ago</small>
+                <h5 class="mb-1">Genre</h5>
+                <small class="text-info">3 days ago</small>
               </div>
               <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-              <small class="text-muted">Donec id elit non mi porta.</small>
+              <small >Donec id elit non mi porta.</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#" class="list-group-item">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small class="text-muted">3 days ago</small>
+                <h5 class="mb-1">Year</h5>
+                <small class="text-info">3 days ago</small>
               </div>
               <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-              <small class="text-muted">Donec id elit non mi porta.</small>
+              <small >Donec id elit non mi porta.</small>
             </a>
           </div>
           <br></div>
