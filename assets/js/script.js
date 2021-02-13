@@ -69,7 +69,7 @@ function movie(year, actor, length) {
   console.log(year);
   console.log(actor);
   console.log(length);
-  console.log(city);
+
 
 
 
