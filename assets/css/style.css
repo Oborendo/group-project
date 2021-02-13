@@ -2,31 +2,36 @@
 /* */
 
 .navbar {
-    font-size: 50px;
-    font-family: 'Staatliches', cursive;
 
+    font-family: 'Staatliches';
+    font-size: 50px;
     background-color: #FF6900 ;
 }
 
 .container {
-    background-color:#FFC08F;
-}
-
-.col-9{
-
-   color:white;
-   font-size: 20px;
-   
+    background-color:white;
 }
 
 .col-4{
-    background-color:#FFC08F;
-    
-}
-.list-group-item{
-    color:#FF6900  ;
+
+   color:white;
+   font-size: 15px;
+   
 }
 
+
+.list-group-item{
+    background-color:#BCEDFF  ;
+}
+
+.col-6{
+background-color:white ;
+}
+.list-group-item-6{
+    background-color: white;
+    margin-bottom: 25px;
+    color:#FF6900;
+}
 /* color navbar and navbar-brand */
 /* change search button color */
 /* in USER HISTORY container add themed color */
