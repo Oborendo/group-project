@@ -12,47 +12,51 @@ var search2 = document.getElementById("search2");
 var search3 = document.getElementById("search3");
 var search4 = document.getElementById("search4");
 // for input values
-var year = document.getElementById("year").value;
-var actor = document.getElementById("actor").value;
-var length = document.getElementById("length").value;
+// var year = document.getElementById("year").value;
+// var actor = document.getElementById("actor").value;
+// var length = document.getElementById("length").value;
 
 // // history search clicks
 search0.addEventListener("click" , function () {
   //click works
   console.log("click");
+  var year = document.getElementById("year").value;
   // city = localStorage.getItem(localStorage.key(0));
-  // cityWheather(localStorage.getItem(localStorage.key(0)));
+ movie(year);
 });
 search1.addEventListener("click", function () {
+  var actor = document.getElementById("actor").value;
   //click works
   console.log("click");
+
   // city2 = localStorage.getItem(localStorage.key(1));
-  // cityWheather(city2);
+  movie(actor);
 });
 search2.addEventListener("click", function () {
+  var length = document.getElementById("length").value;
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(2));
-  // cityWheather(city2);
+  movie(length);
 });
-search3.addEventListener("click", function () {
-  //click works
-  console.log("click");
-  // city2 = localStorage.getItem(localStorage.key(3));
-  // cityWheather(city2);
-});
-search4.addEventListener("click" , function () {
-  //click works
-  console.log("click");
-  // city2 = localStorage.getItem(localStorage.key(4));
-  // cityWheather(city2);
-});
-search5.addEventListener("click" , function () {
-  //click works
-  console.log("click");
-  // city2 = localStorage.getItem(localStorage.key(4));
-  // cityWheather(city2);
-});
+// search3.addEventListener("click", function () {
+//   //click works
+//   console.log("click");
+//   // city2 = localStorage.getItem(localStorage.key(3));
+//   // cityWheather(city2);
+// });
+// search4.addEventListener("click" , function () {
+//   //click works
+//   console.log("click");
+//   // city2 = localStorage.getItem(localStorage.key(4));
+//   // cityWheather(city2);
+// });
+// search5.addEventListener("click" , function () {
+//   //click works
+//   console.log("click");
+//   // city2 = localStorage.getItem(localStorage.key(4));
+//   // cityWheather(city2);
+// });
 
 
 // function updateDisplay() {
@@ -61,9 +65,13 @@ search5.addEventListener("click" , function () {
 //   }
 //   return;
 // }
-function cityWheather(city2) {
-  console.log("connected");
-  console.log(city);
+function movie(year, actor, length) {
+  console.log(year);
+  console.log(actor);
+  console.log(length);
+
+
+
 
   e.preventDefault();
   console.log("hi");
