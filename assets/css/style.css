@@ -1,46 +1,49 @@
-
-
-.btn-group-vertical{
-    border: 2px solid black;
-}
-=======
-
-=======
-=======
-
-
-/* */
-
 .navbar {
+
+    font-display: center;
     font-size: 50px;
     font-family: 'Staatliches', cursive;
+=======
 
+
+    font-family: 'Staatliches';
+    font-size: 50px;
     background-color: #FF6900 ;
+}
+.triangle-right {
+	border-top: 14px solid transparent;
+	border-left: 26px solid #555;
+	border-bottom: 14px solid transparent;
+    margin-right: 650px;
+    
 }
 
 .container {
-    background-color:#FFC08F;
-}
-
-.col-9{
-
-   color:white;
-   font-size: 20px;
-   
+    background-color:white;
 }
 
 .col-4{
-    background-color:#FFC08F;
-    
-}
-.list-group-item{
-    color:#FF6900  ;
 
+   color:white;
+   font-size: 15px;
+   
 }
-.btn-group-vertical{
-    border: 2px solid black;
+
+
+.list-group-item{
+    background-color:#BCEDFF  ;
+    color:#FF6900  ;
+}
+
 =======
 
+.col-6{
+background-color:white ;
+}
+.list-group-item-6{
+    background-color: white;
+    margin-bottom: 25px;
+    color:#FF6900;
 }
 
 /* color navbar and navbar-brand */
@@ -49,6 +52,6 @@
 /* change the color when the selector glides over a choice */
 
 /* in COL.6 change labels/colors to boxes */
-=======
+
 /* in COL.6 change labels/colors to boxes */
 
