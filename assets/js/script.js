@@ -11,13 +11,23 @@ var search1 = document.getElementById("search1");
 var search2 = document.getElementById("search2");
 var search3 = document.getElementById("search3");
 var search4 = document.getElementById("search4");
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
 // // history search clicks
 search0.addEventListener("click" , function () {
+    var year = $("#searchBar").val()
+    fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=" + year, requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+});
   //click works
   console.log("click");
   // city = localStorage.getItem(localStorage.key(0));
   // cityWheather(localStorage.getItem(localStorage.key(0)));
-});
+;
 search1.addEventListener("click", function () {
   //click works
   console.log("click");
@@ -56,31 +66,65 @@ search5.addEventListener("click" , function () {
 //   }
 //   return;
 // }
-function cityWheather(city2) {
-  console.log("connected");
-  console.log(city);
+// function cityWheather(city2) {
+//   console.log("connected");
+//   console.log(city);
 
-  e.preventDefault();
-  console.log("hi");
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
-  };
-  fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=2000", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  // var movie = $("#movie").val().trim();
-  var myHeaders = new Headers();
-  myHeaders.append("Cookie", "__cfduid=d0916ccb9f7d46f2ec8dce7ddf39a97cd1612643777");
-  var requestOptions = {
-    method: 'GET',
-    headers: myHeaders,
-    redirect: 'follow'
-  };
-  fetch("http://www.omdbapi.com?s=use&apikey=d1d991fc&type=movie&page=1", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  // localStorage.setItem("key",);
-};
+//   e.preventDefault();
+//   console.log("hi");
+//   var requestOptions = {
+//     method: 'GET',
+//     redirect: 'follow'
+//   };
+//   fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=2000", requestOptions)
+//     .then(response => response.text())
+//     .then(result => console.log(result))
+//     .catch(error => console.log('error', error));
+//   // var movie = $("#movie").val().trim();
+//   var myHeaders = new Headers();
+//   myHeaders.append("Cookie", "__cfduid=d0916ccb9f7d46f2ec8dce7ddf39a97cd1612643777");
+//   var requestOptions = {
+//     method: 'GET',
+//     headers: myHeaders,
+//     redirect: 'follow'
+//   };
+//   fetch("http://www.omdbapi.com?s=use&apikey=d1d991fc&type=movie&page=1", requestOptions)
+//     .then(response => response.text())
+//     .then(result => console.log(result))
+//     .catch(error => console.log('error', error));
+//   // localStorage.setItem("key",);
+// };
+
+// $("#search").on("click", function() {
+//   var year = $("#userInput").val()
+//   fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=" + year, requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
+// });
+
+
+
+//   document.getElementById("topYear").addEventListener("click", function() {
+
+//     fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=2020", requestOptions)
+//     .then(response => response.text())
+//     .then(result => console.log(result))
+//     .catch(error => console.log('error', error));
+
+
+//   });
+// var movie = $("#movie").val().trim();
+// var myHeaders = new Headers();
+// myHeaders.append("Cookie", "__cfduid=d0916ccb9f7d46f2ec8dce7ddf39a97cd1612643777");
+
+// var requestOptions = {
+//   method: 'GET',
+//   headers: myHeaders,
+//   redirect: 'follow'
+// };
+
+// fetch("http://www.omdbapi.com?s=use&apikey=d1d991fc&type=movie&page=1", requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
