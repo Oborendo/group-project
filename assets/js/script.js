@@ -35,7 +35,11 @@ var search4 = document.getElementById("search4");
 
 search0.addEventListener("click" , function () {
 =======
+
+search0.addEventListener("click" , function () {
+=======
 search0.click(function () {
+
 
   //click works
   console.log("click");
@@ -47,7 +51,11 @@ search0.click(function () {
 
 search1.addEventListener("click", function () {
 =======
+
+search1.addEventListener("click", function () {
+=======
 search1.click(function () {
+
 
   //click works
   console.log("click");
@@ -58,7 +66,11 @@ search1.click(function () {
 
 search2.addEventListener("click", function () {
 =======
+
+search2.addEventListener("click", function () {
+=======
 search2.click(function () {
+
 
   //click works
   console.log("click");
@@ -66,6 +78,8 @@ search2.click(function () {
   // cityWheather(city2);
 });
 
+search3.addEventListener("click", function () {
+=======
 
 search3.addEventListener("click", function () {
 =======
@@ -77,6 +91,8 @@ search3.click(function () {
   // cityWheather(city2);
 });
 
+search4.addEventListener("click" , function () {
+=======
 
 search4.addEventListener("click" , function () {
 =======
@@ -89,6 +105,7 @@ search4.click(function () {
 });
 
 search5.addEventListener("click" , function () {
+
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(4));
