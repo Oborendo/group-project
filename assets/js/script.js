@@ -11,6 +11,11 @@ var search1 = document.getElementById("search1");
 var search2 = document.getElementById("search2");
 var search3 = document.getElementById("search3");
 var search4 = document.getElementById("search4");
+// for input values
+var year = document.getElementById("year").value;
+var actor = document.getElementById("actor").value;
+var length = document.getElementById("length").value;
+
 // // history search clicks
 search0.addEventListener("click" , function () {
   //click works
