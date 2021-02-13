@@ -1,3 +1,4 @@
+
 // event listener for search 
 // pull data from api
 // save data in local storage
@@ -31,7 +32,11 @@ var search4 = document.getElementById("search4");
 
 // history search clicks
 
+
+search0.addEventListener("click" , function () {
+=======
 search0.click(function () {
+
   //click works
   console.log("click");
   // city = localStorage.getItem(localStorage.key(0));
@@ -39,33 +44,73 @@ search0.click(function () {
 
 });
 
+
+search1.addEventListener("click", function () {
+=======
 search1.click(function () {
+
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(1));
   // cityWheather(city2);
 });
 
+
+search2.addEventListener("click", function () {
+=======
 search2.click(function () {
+
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(2));
   // cityWheather(city2);
 });
 
+
+search3.addEventListener("click", function () {
+=======
 search3.click(function () {
+
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(3));
   // cityWheather(city2);
 });
 
+
+search4.addEventListener("click" , function () {
+=======
 search4.click(function () {
+
   //click works
   console.log("click");
   // city2 = localStorage.getItem(localStorage.key(4));
   // cityWheather(city2);
 });
+
+search5.addEventListener("click" , function () {
+  //click works
+  console.log("click");
+  // city2 = localStorage.getItem(localStorage.key(4));
+  // cityWheather(city2);
+});
+
+
+// function updateDisplay() {
+
+
+//   for (i = 0; i < localStorage.length; i++) {
+
+//     $(`#search${i}`).text(localStorage.getItem(localStorage.key(i)))
+
+//   }
+
+
+//   return;
+
+// }
+=======
+
 
 
 
@@ -88,6 +133,9 @@ start.addEventListener("click", function start(e) {
     .catch(error => console.log('error', error));
 
 
+=======
+
+
   // var movie = $("#movie").val().trim();
   var myHeaders = new Headers();
   myHeaders.append("Cookie", "__cfduid=d0916ccb9f7d46f2ec8dce7ddf39a97cd1612643777");
@@ -106,6 +154,12 @@ start.addEventListener("click", function start(e) {
 
 
 
+
+
+  // localStorage.setItem("key",);
+
+});
+=======
 =======
 
   localStorage.setItem("key",);
@@ -125,4 +179,5 @@ fetch("http://www.omdbapi.com?s=use&apikey=d1d991fc&type=movie&page=1", requestO
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
+
 
