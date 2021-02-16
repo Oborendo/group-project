@@ -1,14 +1,3 @@
-
-
-.btn-group-vertical{
-    border: 2px solid black;
-    background-color:#FF6900 ;
-}
-
-
-
-/* */
-
 .navbar {
 
     font-family: 'Staatliches';
@@ -33,28 +22,18 @@
 .list-group-item{
     background-color:#BCEDFF  ;
     color:#FF6900  ;
-
 }
 .btn-group-vertical{
     border: 2px solid black;
 
-}
 
-.col-6{
 
-background-color:white ;
-}
-.list-group-item-6{
-    background-color: white;
-    margin-bottom: 25px;
-    color:#FF6900;
-}
 /* color navbar and navbar-brand */
 /* change search button color */
 /* in USER HISTORY container add themed color */
 /* change the color when the selector glides over a choice */
 
 /* in COL.6 change labels/colors to boxes */
-=======
+
 /* in COL.6 change labels/colors to boxes */
 
