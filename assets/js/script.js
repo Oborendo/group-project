@@ -11,8 +11,9 @@ var search1 = document.getElementById("search1");
 var search2 = document.getElementById("search2");
 var search3 = document.getElementById("search3");
 var search4 = document.getElementById("search4");
-
-
+var listYear = document.getElementById("list-year");
+var listActor = document.getElementById("list-actor");
+var listPopular = document.getElementById("list-popular");
 
   var requestOptions = {
     method: 'GET',
@@ -27,42 +28,55 @@ var search4 = document.getElementById("search4");
 
 
 search0.addEventListener("click" , function () {
-
-  //click works
-  console.log("click");
   var year = document.getElementById("year").value;
-  // fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=" + year, requestOptions)
-  // .then(response => response.text())
-  //   .then(result => console.log(result))
-  //   .catch(error => console.log('error', error));
-
+ fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=" + year, requestOptions)
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("NETWORK RESPONSE NOT OK");
+    }
+  })
+  .then(function (data) {   
+    console.log(data); 
+  listYear.textContent(data);
+  return;
   // city = localStorage.getItem(localStorage.key(0));
-
-  // cityWheather(localStorage.getItem(localStorage.key(0)));
-
-
- movie(year);
 });
-
+});
 search1.addEventListener("click", function () {
-  var actor = document.getElementById("actor").value;
-
-  // fetch("https://api.themoviedb.org/3/search/person?api_key=b604796e41f8ebf14ff8be62a4319577&language=en-US&query=" + actor + "&page=1&include_adult=false", requestOptions)
-  // .then(response => response.text())
-  //   .then(result => console.log(result))
-    // .catch(error => console.log('error', error));
-  // city = localStorage.getItem(localStorage.key(0));
- movie(actor);
+var actor = document.getElementById("actor").value;
+fetch("https://api.themoviedb.org/3/search/person?api_key=b604796e41f8ebf14ff8be62a4319577&language=en-US&query=" + actor + "&page=1&include_adult=false", requestOptions)
+.then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error("NETWORK RESPONSE NOT OK");
+  }
+})
+.then(function (data) {   
+  console.log(data); 
+  listActor.textContent(data);
+  return;
+// city = localStorage.getItem(localStorage.key(0));
 });
-
+});
 search2.addEventListener("click", function () {
-  var type = document.getElementById("length").value;
-  // fetch("https://api.themoviedb.org/3/" + type + "/popular?api_key=b604796e41f8ebf14ff8be62a4319577&language=en-US&page=1 ", requestOptions)
-  // .then(response => response.text())
-  //   .then(result => console.log(result))
-  //   .catch(error => console.log('error', error));
-  // city = localStorage.getItem(localStorage.key(0));
- movie(type);
+var type = document.getElementById("length").value;
+fetch("https://api.themoviedb.org/3/" + type + "/popular?api_key=b604796e41f8ebf14ff8be62a4319577&language=en-US&page=1 ", requestOptions)
+.then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error("NETWORK RESPONSE NOT OK");
+  }
+})
+.then(function (data) {   
+  console.log(data); 
+  listPopular.textContent(data);
+  return;
+// city = localStorage.getItem(localStorage.key(0));
+});
 });
 
 
@@ -86,101 +100,3 @@ search2.addEventListener("click", function () {
 //   // cityWheather(city2);
 // });
 
-
-// function updateDisplay() {
-//   for (i = 0; i < localStorage.length; i++) {
-//     $(`#search${i}`).text(localStorage.getItem(localStorage.key(i)))
-//   }
-//   return;
-// }
-
-
-
-function movie(year, actor, length) {
-  fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=" + year, requestOptions)
-  .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-
-    fetch("https://api.themoviedb.org/3/search/person?api_key=b604796e41f8ebf14ff8be62a4319577&language=en-US&query=" + actor + "&page=1&include_adult=false", requestOptions)
-    .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
-
-    fetch("https://api.themoviedb.org/3/" + type + "/popular?api_key=b604796e41f8ebf14ff8be62a4319577&language=en-US&page=1 ", requestOptions)
-    .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
-
-
-
-  console.log(result);
- 
-  // fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=" + year, requestOptions)
-  // .then(response => response.text())
-  //   .then(result => console.log(result))
-  //   .catch(error => console.log('error', error));
-  // // var movie = $("#movie").val().trim();
- 
- 
-// var myHeaders = new Headers();
-//   myHeaders.append("Cookie", "__cfduid=d0916ccb9f7d46f2ec8dce7ddf39a97cd1612643777");
-
-
-
-
-
-
-
-
-//   e.preventDefault();
-//   console.log("hi");
-//   var requestOptions = {
-//     method: 'GET',
-//     redirect: 'follow'
-//   };
-//   fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=2000", requestOptions)
-//     .then(response => response.text())
-//     .then(result => console.log(result))
-//     .catch(error => console.log('error', error));
-//   // var movie = $("#movie").val().trim();
-//   var myHeaders = new Headers();
-//   myHeaders.append("Cookie", "__cfduid=d0916ccb9f7d46f2ec8dce7ddf39a97cd1612643777");
-//   var requestOptions = {
-//     method: 'GET',
-//     headers: myHeaders,
-//     redirect: 'follow'
-//   };
-
-};
-
-// };
-
-// $("#search").on("click", function() {
-//   var year = $("#userInput").val()
-//   fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=" + year, requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
-// });
-
-
-
-//   document.getElementById("topYear").addEventListener("click", function() {
-
-//     fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&primary_release_year=2020", requestOptions)
-//     .then(response => response.text())
-//     .then(result => console.log(result))
-//     .catch(error => console.log('error', error));
-
-
-//   });
-// var movie = $("#movie").val().trim();
-// var myHeaders = new Headers();
-// myHeaders.append("Cookie", "__cfduid=d0916ccb9f7d46f2ec8dce7ddf39a97cd1612643777");
-
-
-// fetch("http://www.omdbapi.com?s=use&apikey=d1d991fc&type=movie&page=1", requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
