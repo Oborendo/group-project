@@ -5,7 +5,16 @@
     background-color: #FF6900 ;
 }
 
+img{
+    margin-top: 20px;
+    height:235px;
+    width:350px;
 
+    
+}
+p{
+    margin-top: 20px;
+}
 .container {
     background-color:white;
 }
