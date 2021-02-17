@@ -1,19 +1,13 @@
 
-// event listener for search 
-// pull data from api
-// save data in local storage
-// add data to cards on left as clickable researches
-// once selcted go to different page for results
-// 5 for each
 
-var start = document.getElementById("movie");
+// links all to html 
 var search0 = document.getElementById("search0");
 var search1 = document.getElementById("search1");
 var search2 = document.getElementById("search2");
 var search3 = document.getElementById("search3");
 var search4 = document.getElementById("search4");
 
-
+// makes available globaly
 var requestOptions = {
   method: 'GET',
   redirect: 'follow'
@@ -23,7 +17,7 @@ var requestOptions = {
 
 
 
-
+// click function
 search0.addEventListener("click", function () {
   var year = document.getElementById("year").value;
   fetch("https://api.themoviedb.org/3/discover/movie?api_key=b604796e41f8ebf14ff8be62a4319577&sort_by=popularity.desc&primary_release_year=" + year, requestOptions)
@@ -94,25 +88,27 @@ search2.addEventListener("click", function () {
       }
     })
     .then(function (data) {
-     for (let i = 0; i < 6; i++) {
-console.log(data);
-        document.querySelector("#liPopular").innerHTML = ""
-        var popular = document.createElement("H2")
-        var popular1 = document.createElement("H2")
-        var description2 = document.createElement("P")
-        popular.innerHTML = data.results[i].name
-        popular1.innerHTML = data.results[i].title
-        description2.innerHTML = data.results[i].overview
-        document.querySelector("#list-popular").appendChild(popular);
-        document.querySelector("#list-popular").appendChild(popular1);
-        document.querySelector("#list-popular").appendChild(description2);
-      }
-      return;
- 
-    });
-});
+      for (let i = 0; i < 6; i++) {
+        console.log(data);
+                document.querySelector("#liPopular").innerHTML = ""
+                var popular = document.createElement("H2")
+                var popular1 = document.createElement("H2")
+                var description2 = document.createElement("P")
+                if(data.results[i].name == undefined){
+           
+                popular1.innerHTML = data.results[i].title
+                description2.innerHTML = data.results[i].overview
 
+                }else if (data.results[i].title == undefined){
 
-
-
-
+                 popular.innerHTML = data.results[i].name
+                description2.innerHTML = data.results[i].overview
+                }
+                document.querySelector("#list-popular").appendChild(popular);
+                document.querySelector("#list-popular").appendChild(popular1);
+                document.querySelector("#list-popular").appendChild(description2);
+              }
+              return;
+           
+            });
+        });
