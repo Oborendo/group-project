@@ -65,12 +65,23 @@ search1.addEventListener("click", function () {
      for (let i= 0; i< 6; i++) {
  
      document.querySelector("#liActor").innerHTML = ""
-     var title = document.createElement("H2")
-      var description = document.createElement("P")
-     title.innerHTML = data.results[0].known_for[i].title
-    description.innerHTML =data.results[0].known_for[i].overview
-     document.querySelector("#list-actor").appendChild(title);
-    document.querySelector("#list-actor").appendChild(description);
+     var title1 = document.createElement("H2")
+      var description1 = document.createElement("P")
+      if(data.results[0].known_for[i].title == undefined){
+           
+        title1.innerHTML = data.results[0].known_for[i].name
+        description1.innerHTML =data.results[0].known_for[i].overview
+     
+
+        }else if (data.results[0].known_for[i].name == undefined){
+
+       title1.innerHTML = data.results[0].known_for[i].title
+        description1.innerHTML = data.results[0].known_for[i].overview
+        
+        }
+   
+     document.querySelector("#list-actor").appendChild(title1);
+    document.querySelector("#list-actor").appendChild(description1);
      }
      return;
     });
